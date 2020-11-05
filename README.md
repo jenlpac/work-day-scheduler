@@ -8,7 +8,6 @@
 
 ## Screenshots:
 ![Screenshot 1](./assets/images/Screenshot_1.JPG)
-
 ![Screenshot 2](./assets/images/Schreenshot_2.JPG)
 
 ## Links:
