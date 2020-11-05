@@ -32,27 +32,33 @@ $(document).ready(function() {
     // Audit time to update section styling
     function auditTime() {
         // Set current time
-        var now = moment().hour();
-
+        var nowTime = moment().hours();
+        console.log(nowTime);
         // Loop through time blocks
         $(".time-block").each(function() {
             // Set variable for each time block
             var timeBlock = parseInt($(this).attr("id").split("-")[0]);
+            console.log(timeBlock);
             
-                if(timeBlock < now) {
-                    // Style variable time block for past
-                    $(this).removeClass("hour");
-                    $(this).addClass("past");
-                }
-                else if (timeBlock === now) {
-                    // Style variable time block for present
-                    $(this).removeClass("hour");
-                    // Style variable time block for future
-                }
-            
-        })
-
-        
+            if (timeBlock < nowTime) {
+                // Style variable time block for past
+                $(this).children(".description").removeClass("future");
+                $(this).children(".description").removeClass("present");
+                $(this).children(".description").addClass("past");
+            }
+            else if (timeBlock === nowTime) {
+                // Style variable time block for present
+                $(this).children(".description").removeClass("past");
+                $(this).children(".description").removeClass("future");
+                $(this).children(".description").addClass("present");
+            }
+            else {
+                // Style variable time block for future
+                $(this).children(".description").removeClass("past");
+                $(this).children(".description").removeClass("present");
+                $(this).children(".description").addClass("future");
+            }
+        });
     }
 
     auditTime();
