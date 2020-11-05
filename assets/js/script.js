@@ -28,4 +28,19 @@ $(document).ready(function() {
     $("#3pm .description").val(localStorage.getItem("3pm"));
     $("#4pm .description").val(localStorage.getItem("4pm"));
     $("#5pm .description").val(localStorage.getItem("5pm"));
+
+    // Audit time to update section styling
+    function auditTime() {
+        // Set current time
+
+        // Loop through time blocks
+
+        // Set variable for each time block
+
+        // Style variable time block for past
+
+        // Style variable time block for present
+
+        // Style variable time block for future
+    }
 })
