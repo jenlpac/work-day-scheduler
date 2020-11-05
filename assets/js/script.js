@@ -18,33 +18,35 @@ $(document).ready(function() {
     })
 
     // Get data from localStorage
-    $("#8-am .description").val(localStorage.getItem("8-am"));
-    $("#9-am .description").val(localStorage.getItem("9-am"));
-    $("#10-am .description").val(localStorage.getItem("10-am"));
-    $("#11-am .description").val(localStorage.getItem("11-am"));
-    $("#12-pm .description").val(localStorage.getItem("12-pm"));
-    $("#1-pm .description").val(localStorage.getItem("1-pm"));
-    $("#2-pm .description").val(localStorage.getItem("2-pm"));
-    $("#3-pm .description").val(localStorage.getItem("3-pm"));
-    $("#4-pm .description").val(localStorage.getItem("4-pm"));
-    $("#5-pm .description").val(localStorage.getItem("5-pm"));
+    $("#08-hund .description").val(localStorage.getItem("08-hund"));
+    $("#09-hund .description").val(localStorage.getItem("09-hund"));
+    $("#10-hund .description").val(localStorage.getItem("10-hund"));
+    $("#11-hund .description").val(localStorage.getItem("11-hund"));
+    $("#12-hund .description").val(localStorage.getItem("12-hund"));
+    $("#13-hund .description").val(localStorage.getItem("13-hund"));
+    $("#14-hund .description").val(localStorage.getItem("14-hund"));
+    $("#15-hund .description").val(localStorage.getItem("15-hund"));
+    $("#16-hund .description").val(localStorage.getItem("16-hund"));
+    $("#17-hund .description").val(localStorage.getItem("17-hund"));
 
     // Audit time to update section styling
     function auditTime() {
         // Set current time
         var now = moment().hour();
-        console.log(now);
 
         // Loop through time blocks
-        $(".time-block").each(function () {
+        $(".time-block").each(function() {
             // Set variable for each time block
-            var timeBlock = parseInt($(this).attr("id").split(".")[1]);
+            var timeBlock = parseInt($(this).attr("id").split("-")[0]);
             
                 if(timeBlock < now) {
                     // Style variable time block for past
-                    
+                    $(this).removeClass("hour");
+                    $(this).addClass("past");
+                }
+                else if (timeBlock === now) {
                     // Style variable time block for present
-
+                    $(this).removeClass("hour");
                     // Style variable time block for future
                 }
             
