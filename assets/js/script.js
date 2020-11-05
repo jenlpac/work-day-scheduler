@@ -33,12 +33,12 @@ $(document).ready(function() {
     function auditTime() {
         // Set current time
         var nowTime = moment().hours();
-        console.log(nowTime);
+        // console.log(nowTime);
         // Loop through time blocks
         $(".time-block").each(function() {
             // Set variable for each time block
             var timeBlock = parseInt($(this).attr("id").split("-")[0]);
-            console.log(timeBlock);
+            // console.log(timeBlock);
             
             if (timeBlock < nowTime) {
                 // Style variable time block for past
