@@ -8,7 +8,7 @@
 
 ## Screenshots:
 ![Screenshot 1](./assets/images/Screenshot_1.JPG)
-![Screenshot 2](./assets/images/Schreenshot_2.JPG)
+![Screenshot 2](./assets/images/Screenshot_2.JPG)
 
 ## Links:
 #### Link to deployed application:
