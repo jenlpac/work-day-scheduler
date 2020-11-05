@@ -62,4 +62,6 @@ $(document).ready(function() {
     }
 
     auditTime();
+
+    var interval = setInterval(auditTime, (1000 * 60) * 10);
 })
