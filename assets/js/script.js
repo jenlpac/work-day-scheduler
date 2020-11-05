@@ -4,18 +4,28 @@ $("#currentDay").html(today);
 
 // Save event data on button click
 $(document).ready(function() {
-    
+
     // Save button was clicked
     $(".saveBtn").click(function () {
-        // Get event and time values
-        var event = $(this).siblings(".description").val();
+        // Get event and time data
         var time = $(this).parent().attr("id");
-        console.log(event);
+        var event = $(this).siblings(".description").val();
         console.log(time);
+        console.log(event);
 
-        // Save event and time values
-        localStorage.setItem(event, time);
+        // Save event and time data
+        localStorage.setItem(time, event);
     })
 
-
+    // Get data from localStorage
+    $("#8am .description").val(localStorage.getItem("8am"));
+    $("#9am .description").val(localStorage.getItem("9am"));
+    $("#10am .description").val(localStorage.getItem("10am"));
+    $("#11am .description").val(localStorage.getItem("11am"));
+    $("#12pm .description").val(localStorage.getItem("12pm"));
+    $("#1pm .description").val(localStorage.getItem("1pm"));
+    $("#2pm .description").val(localStorage.getItem("2pm"));
+    $("#3pm .description").val(localStorage.getItem("3pm"));
+    $("#4pm .description").val(localStorage.getItem("4pm"));
+    $("#5pm .description").val(localStorage.getItem("5pm"));
 })
